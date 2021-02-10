@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\DB;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    try {
-        DB::getPdo();
-        echo 'Yey, it works!';
-    } catch(\Exception $e) {
-        die('Could not connect to the database: '.$e);
-    }
+    return view('welcome');
+    // try {
+    //     DB::getPdo();
+    //     echo 'Yey, it works!';
+    // } catch(\Exception $e) {
+    //     die('Could not connect to the database: '.$e);
+    // }
+});
+
+Route::get('/livewire', function () {
+    return view('livewire');
 });
