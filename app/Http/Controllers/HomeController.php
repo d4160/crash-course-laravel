@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index() {
 
-        return view('website.home');
+        return view('welcome');
     }
 
     public function page($id) {

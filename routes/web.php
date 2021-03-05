@@ -51,3 +51,7 @@ Route::get('/about_us/{id}', function ($id) {
 Route::get('/pages', [PageController::class, 'get']);
 Route::get('/upload-image', [UploadImageController::class, 'index']);
 Route::post('/upload-image/upload', [UploadImageController::class, 'upload']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
